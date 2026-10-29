@@ -1,9 +1,9 @@
 using System;
 using System.Text;
 
-namespace Labs
+namespace Lab2
 {
-    public static class Lab2
+    class Program
     {
         public static int ToMultiplicate(int x, int N = 2)
         {
@@ -29,8 +29,10 @@ namespace Labs
             return sb.ToString();
         }
 
-        public static void Main2()
+        static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             Console.WriteLine(ToMultiplicate(5));
             Console.WriteLine(ToMultiplicate(5, 4));
             Console.WriteLine(ToMultiplicate(2.5));

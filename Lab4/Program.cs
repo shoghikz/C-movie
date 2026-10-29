@@ -1,8 +1,9 @@
 using System;
+using System.Text;
 
-namespace Labs
+namespace Lab4
 {
-    public static class Lab4
+    class Program
     {
         public static void A(in int x)
         {
@@ -29,17 +30,19 @@ namespace Labs
             return sum;
         }
 
-        public static void Main4()
+        static void Main()
         {
-            int a = 7;
-            A(in a);                      
+            Console.OutputEncoding = Encoding.UTF8;
 
-            B(out int b);                 
+            int a = 7;
+            A(in a);
+
+            B(out int b);
             Console.WriteLine($"b = {b}");
 
             int c = 5;
             C(ref c);
-            Console.WriteLine($"C-ից հետո c = {c}"); 
+            Console.WriteLine($"C-ից հետո c = {c}");
 
             Console.WriteLine($"SumValues()          = {SumValues()}");
             Console.WriteLine($"SumValues(1,2,3)     = {SumValues(1, 2, 3)}");

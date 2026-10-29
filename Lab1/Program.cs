@@ -1,6 +1,7 @@
 using System;
+using System.Text;
 
-namespace Labs
+namespace Lab1
 {
     public class SquareMatrix
     {
@@ -24,7 +25,7 @@ namespace Labs
             Random rnd = new Random();
             for (int i = 0; i < N; i++)
                 for (int j = 0; j < N; j++)
-                    matrix[i, j] = rnd.Next(A, B + 1); 
+                    matrix[i, j] = rnd.Next(A, B + 1);
         }
 
         public void ShowMatrix()
@@ -37,7 +38,6 @@ namespace Labs
             }
         }
 
-
         public int CountOdd()
         {
             int count = 0;
@@ -48,10 +48,12 @@ namespace Labs
         }
     }
 
-    public static class Lab1
+    class Program
     {
-        public static void Main1()
+        static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             SquareMatrix m = new SquareMatrix(5, -10, 20);
             m.ShowMatrix();
             Console.WriteLine($"Կենտ թվերի քանակը՝ {m.CountOdd()}");
